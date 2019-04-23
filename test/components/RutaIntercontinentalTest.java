@@ -17,7 +17,11 @@ import components.RutaIntercontinental;
 public class RutaIntercontinentalTest {
     
     private RutaIntercontinental ruta;
-
+    
+    public void setUp() {        
+        ruta = new RutaIntercontinental("codi", "BCN", "MW", "ES", "RUS", "EU","AS", 5000);
+    }
+    
     @Test
     public void testGetCodi() {
         assertEquals("cTest", ruta.getCodi());

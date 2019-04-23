@@ -16,7 +16,11 @@ import components.RutaNacional;
  */
 public class RutaNacionalTest {
     private RutaNacional ruta;
-
+    
+    public void setUp() {        
+        ruta = new RutaNacional("codi", "ES", "BCN", "MAD", 600);
+    }
+    
     @Test
     public void testGetCodi() {
         assertEquals("cTest", ruta.getCodi());

@@ -17,7 +17,11 @@ import components.RutaTransoceanica;
 public class RutaTransoceanicaTest {
     
     RutaTransoceanica ruta;
-
+    
+    public void setUp() {        
+        ruta = new RutaTransoceanica("codi", "BCN", "NY", "ES", "EEUU", "EU","AM","ATL", 6000);
+    }
+    
     @Test
     public void testGetCodi() {
         assertEquals("cTest", ruta.getCodi());
