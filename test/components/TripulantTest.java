@@ -18,22 +18,24 @@ import static org.junit.Assert.*;
  * @author Xavi
  */
 public class TripulantTest {
-    
-    public TripulantTest() {
-    }
-    
+
+    private Tripulant tripulantTest;
+    private date dateTripulant;
+
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
+      tripulantTest = new Tripulant();
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -43,13 +45,7 @@ public class TripulantTest {
      */
     @Test
     public void testGetPassaport() {
-        System.out.println("getPassaport");
-        Tripulant instance = null;
-        String expResult = "";
-        String result = instance.getPassaport();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("passTest", tripulantTest.getPassaport());
     }
 
     /**
@@ -57,12 +53,8 @@ public class TripulantTest {
      */
     @Test
     public void testSetPassaport() {
-        System.out.println("setPassaport");
-        String passaport = "";
-        Tripulant instance = null;
-        instance.setPassaport(passaport);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        tripulantTest.setPassaport("passTest");
+        assertEquals("passTest", tripulantTest.getPassaport());
     }
 
     /**
@@ -70,13 +62,7 @@ public class TripulantTest {
      */
     @Test
     public void testGetNom() {
-        System.out.println("getNom");
-        Tripulant instance = null;
-        String expResult = "";
-        String result = instance.getNom();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("nomTest", tripulantTest.getNom());
     }
 
     /**
@@ -84,12 +70,8 @@ public class TripulantTest {
      */
     @Test
     public void testSetNom() {
-        System.out.println("setNom");
-        String nom = "";
-        Tripulant instance = null;
-        instance.setNom(nom);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        tripulantTest.setNom("nomTest");
+        assertEquals("nomTest", tripulantTest.getNom());
     }
 
     /**
@@ -97,13 +79,7 @@ public class TripulantTest {
      */
     @Test
     public void testGetEdat() {
-        System.out.println("getEdat");
-        Tripulant instance = null;
-        int expResult = 0;
-        int result = instance.getEdat();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(50, tripulantTest.getEdat());
     }
 
     /**
@@ -111,12 +87,8 @@ public class TripulantTest {
      */
     @Test
     public void testSetEdat() {
-        System.out.println("setEdat");
-        int edat = 0;
-        Tripulant instance = null;
-        instance.setEdat(edat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        tripulantTest.setEdat(51);
+        assertEquals(51, tripulantTest.getEdat());
     }
 
     /**
@@ -124,13 +96,7 @@ public class TripulantTest {
      */
     @Test
     public void testGetDataAlta() {
-        System.out.println("getDataAlta");
-        Tripulant instance = null;
-        Date expResult = null;
-        Date result = instance.getDataAlta();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assetEquals(dateTripulant, tripulantTest.getDataAlta());
     }
 
     /**
@@ -138,12 +104,9 @@ public class TripulantTest {
      */
     @Test
     public void testSetDataAlta() {
-        System.out.println("setDataAlta");
-        Date dataAlta = null;
-        Tripulant instance = null;
-        instance.setDataAlta(dataAlta);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        dateTripulant = new date();
+        tripulantTest.setDataAlta(dateTripulant);
+        assertEquals(dateTripulant, tripulantTest.getDataAlta());
     }
 
     /**
@@ -151,13 +114,7 @@ public class TripulantTest {
      */
     @Test
     public void testGetHoresVol() {
-        System.out.println("getHoresVol");
-        Tripulant instance = null;
-        int expResult = 0;
-        int result = instance.getHoresVol();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(50, tripulantTest.getHoresVol());
     }
 
     /**
@@ -165,12 +122,8 @@ public class TripulantTest {
      */
     @Test
     public void testSetHoresVol() {
-        System.out.println("setHoresVol");
-        int horesVol = 0;
-        Tripulant instance = null;
-        instance.setHoresVol(horesVol);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        tripulantTest.setHoresVol(55);
+        assertEquals(55, tripulantTest.getHoresVol());
     }
 
     /**
@@ -178,13 +131,7 @@ public class TripulantTest {
      */
     @Test
     public void testGetRang() {
-        System.out.println("getRang");
-        Tripulant instance = null;
-        String expResult = "";
-        String result = instance.getRang();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("Copilot", tripulantTest.getRang());
     }
 
     /**
@@ -192,43 +139,8 @@ public class TripulantTest {
      */
     @Test
     public void testSetRang() {
-        System.out.println("setRang");
-        String rang = "";
-        Tripulant instance = null;
-        instance.setRang(rang);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        tripulantTest.setRang("C");
+        assertEquals("C", tripulantTest.getRang());
     }
 
-    /**
-     * Test of modificarComponent method, of class Tripulant.
-     */
-    @Test
-    public void testModificarComponent() {
-        System.out.println("modificarComponent");
-        Tripulant instance = null;
-        instance.modificarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of mostrarComponent method, of class Tripulant.
-     */
-    @Test
-    public void testMostrarComponent() {
-        System.out.println("mostrarComponent");
-        Tripulant instance = null;
-        instance.mostrarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    public class TripulantImpl extends Tripulant {
-
-        public TripulantImpl() {
-            super("", "", 0, 0);
-        }
-    }
-    
 }

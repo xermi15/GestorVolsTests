@@ -17,101 +17,92 @@ import static org.junit.Assert.*;
  * @author Xavi
  */
 public class TripulantCabinaTest {
-    
-    public TripulantCabinaTest() {
-    }
-    
-    @BeforeClass
+
+    private TripulantCabina tripulant;
+    private date dTripulant;
+
+    @Before
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
+      tripulant = Tripulant();
     }
-    
+
     @After
     public void tearDown() {
     }
 
-    /**
-     * Test of getBarres method, of class TripulantCabina.
-     */
     @Test
-    public void testGetBarres() {
-        System.out.println("getBarres");
-        TripulantCabina instance = null;
-        int expResult = 0;
-        int result = instance.getBarres();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  	public void testGetPassaport() {
+  		assertEquals("PassaportTest", tripulant.getPassaport());
+  	}
+
+  	@Test
+  	public void testSetPassaport() {
+  		tripulant.setPassaport("PassaportTest2");
+  		assertEquals("PassaportTest2", tripulant.getPassaport());
+  	}
+
+  	@Test
+  	public void testGetNom() {
+  		assertEquals("NomTest", tripulant.getNom());
+  	}
+
+  	@Test
+  	public void testSetNom() {
+  		tripulant.setNom("NomTest2");
+  		assertEquals("NomTest2", tripulant.getNom());
+  	}
+
+  	@Test
+  	public void testGetEdat() {
+  		assertEquals(40, tripulant.getEdat());
+  	}
+
+  	@Test
+  	public void testSetEdat() {
+  		tripulant.setEdat(15);
+  		assertEquals(15, tripulant.getEdat());
+  	}
+
+  	@Test
+  	public void testGetDataAlta() {
+  		assertEquals(data, tripulant.getDataAlta());
+  	}
+
+    @Test
+    public void testSetDataAlta() {
+    	dTripulant = new Date();
+    	tripulant.setDataAlta(dataAlta);
+    	assertEquals(dTripulant, tripulant.getDataAlta());
     }
 
-    /**
-     * Test of setBarres method, of class TripulantCabina.
-     */
     @Test
-    public void testSetBarres() {
-        System.out.println("setBarres");
-        int barres = 0;
-        TripulantCabina instance = null;
-        instance.setBarres(barres);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetHoresVol() {
+    	assertEquals(100, tripulant.getHoresVol());
     }
 
-    /**
-     * Test of nouTripulantCabina method, of class TripulantCabina.
-     */
     @Test
-    public void testNouTripulantCabina() {
-        System.out.println("nouTripulantCabina");
-        TripulantCabina expResult = null;
-        TripulantCabina result = TripulantCabina.nouTripulantCabina();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetHoresVol() {
+    	tripulant.setHoresVol(200);
+    	assertEquals(200, tripulant.getHoresVol());
     }
 
-    /**
-     * Test of modificarComponent method, of class TripulantCabina.
-     */
     @Test
-    public void testModificarComponent() {
-        System.out.println("modificarComponent");
-        TripulantCabina instance = null;
-        instance.modificarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+      public void testGetRang() {
+        assertEquals("Comandant", tripulant.getRang());
+      }
 
-    /**
-     * Test of mostrarComponent method, of class TripulantCabina.
-     */
     @Test
-    public void testMostrarComponent() {
-        System.out.println("mostrarComponent");
-        TripulantCabina instance = null;
-        instance.mostrarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+      public void testSetRang() {
+        tripulant.setRang("C");
+        assertEquals("C", tripulant.getRang());
+      }
 
-    /**
-     * Test of assignarBarres method, of class TripulantCabina.
-     */
-    @Test
-    public void testAssignarBarres() {
-        System.out.println("assignarBarres");
-        String pRang = "";
-        TripulantCabina instance = null;
-        instance.assignarBarres(pRang);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }

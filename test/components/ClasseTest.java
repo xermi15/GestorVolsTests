@@ -11,30 +11,20 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import components.Classe;
 
 /**
  *
  * @author Xavi
  */
 public class ClasseTest {
-    
-    public ClasseTest() {
-    }
-    
+
+    private Classe cla;
+
     @BeforeClass
     public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+      TestEntity nTest = new TestEntity();
+      cla = nTest.getClasses();
     }
 
     /**
@@ -42,13 +32,7 @@ public class ClasseTest {
      */
     @Test
     public void testGetNom() {
-        System.out.println("getNom");
-        Classe instance = null;
-        String expResult = "";
-        String result = instance.getNom();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("nomTest", classe.getNom());
     }
 
     /**
@@ -56,12 +40,8 @@ public class ClasseTest {
      */
     @Test
     public void testSetNom() {
-        System.out.println("setNom");
-        String nom = "";
-        Classe instance = null;
-        instance.setNom(nom);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        classe.setNom("nTest");
+        assertEquals("nTest", classe.getNom());
     }
 
     /**
@@ -69,63 +49,7 @@ public class ClasseTest {
      */
     @Test
     public void testGetCapacitat() {
-        System.out.println("getCapacitat");
-        Classe instance = null;
-        int expResult = 0;
-        int result = instance.getCapacitat();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(100, classe.getCapacitat());
     }
 
-    /**
-     * Test of setCapacitat method, of class Classe.
-     */
-    @Test
-    public void testSetCapacitat() {
-        System.out.println("setCapacitat");
-        int capacitat = 0;
-        Classe instance = null;
-        instance.setCapacitat(capacitat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of novaClasse method, of class Classe.
-     */
-    @Test
-    public void testNovaClasse() {
-        System.out.println("novaClasse");
-        Classe expResult = null;
-        Classe result = Classe.novaClasse();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of modificarComponent method, of class Classe.
-     */
-    @Test
-    public void testModificarComponent() {
-        System.out.println("modificarComponent");
-        Classe instance = null;
-        instance.modificarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of mostrarComponent method, of class Classe.
-     */
-    @Test
-    public void testMostrarComponent() {
-        System.out.println("mostrarComponent");
-        Classe instance = null;
-        instance.mostrarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }

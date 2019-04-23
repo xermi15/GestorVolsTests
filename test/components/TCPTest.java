@@ -12,27 +12,31 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import Components.TripulantCabina;
+
 /**
  *
  * @author Xavi
  */
 public class TCPTest {
-    
-    public TCPTest() {
-    }
-    
+
+    private TripulantCabina tripulant;
+
     @BeforeClass
     public static void setUpClass() {
+      TestEntity nTest = new TestEntity();
+      tripulant = nTest.getTripulant();
+
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -49,5 +53,5 @@ public class TCPTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }

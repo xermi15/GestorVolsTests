@@ -17,24 +17,15 @@ import static org.junit.Assert.*;
  * @author Xavi
  */
 public class AvioTest {
-    
+
     public AvioTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+
     @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+    public static void setUpClass() {
+      TestEntity nTest = new TestEntity();
+      avio = nTest.getAvio();
+      classe = nTest.getClasses();
     }
 
     /**
@@ -42,13 +33,7 @@ public class AvioTest {
      */
     @Test
     public void testGetCodi() {
-        System.out.println("getCodi");
-        Avio instance = null;
-        String expResult = "";
-        String result = instance.getCodi();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("codiA", avio.getCodi());
     }
 
     /**
@@ -56,12 +41,8 @@ public class AvioTest {
      */
     @Test
     public void testSetCodi() {
-        System.out.println("setCodi");
-        String codi = "";
-        Avio instance = null;
-        instance.setCodi(codi);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        avio.setCodi("CodiA");
+        assertEquals("CodiA", avio.getCodi());
     }
 
     /**
@@ -69,13 +50,7 @@ public class AvioTest {
      */
     @Test
     public void testGetFabricant() {
-        System.out.println("getFabricant");
-        Avio instance = null;
-        String expResult = "";
-        String result = instance.getFabricant();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("CodiF", avio.getFabricant());
     }
 
     /**
@@ -83,12 +58,8 @@ public class AvioTest {
      */
     @Test
     public void testSetFabricant() {
-        System.out.println("setFabricant");
-        String fabricant = "";
-        Avio instance = null;
-        instance.setFabricant(fabricant);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        avio.setFabricant('CodiF');
+        assertEquals("CodiF", avio.getFabricant());
     }
 
     /**
@@ -96,13 +67,7 @@ public class AvioTest {
      */
     @Test
     public void testGetModel() {
-        System.out.println("getModel");
-        Avio instance = null;
-        String expResult = "";
-        String result = instance.getModel();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("mTest", avio.getModel());
     }
 
     /**
@@ -110,12 +75,8 @@ public class AvioTest {
      */
     @Test
     public void testSetModel() {
-        System.out.println("setModel");
-        String model = "";
-        Avio instance = null;
-        instance.setModel(model);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        avio.setModel("mTest");
+        assertEquals("mTest", avio.getModel());
     }
 
     /**
@@ -123,13 +84,7 @@ public class AvioTest {
      */
     @Test
     public void testGetCapacitat() {
-        System.out.println("getCapacitat");
-        Avio instance = null;
-        int expResult = 0;
-        int result = instance.getCapacitat();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(100, avio.getCapacitat());
     }
 
     /**
@@ -137,12 +92,8 @@ public class AvioTest {
      */
     @Test
     public void testSetCapacitat() {
-        System.out.println("setCapacitat");
-        int capacitat = 0;
-        Avio instance = null;
-        instance.setCapacitat(capacitat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        avio.setCapacitat(150);
+        assertEquals(150, avio.getCapacitat());
     }
 
     /**
@@ -150,13 +101,7 @@ public class AvioTest {
      */
     @Test
     public void testGetClasses() {
-        System.out.println("getClasses");
-        Avio instance = null;
-        Classe[] expResult = null;
-        Classe[] result = instance.getClasses();
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(classe, avio.getClasses());
     }
 
     /**
@@ -164,12 +109,9 @@ public class AvioTest {
      */
     @Test
     public void testSetClasses() {
-        System.out.println("setClasses");
-        Classe[] classes = null;
-        Avio instance = null;
-        instance.setClasses(classes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      Classe[] classTest = new Classe("testClass", 100);
+      avio.setClasses(classTest);
+      assertEquals(classTest[0].getNom(), avio.getClasses()[0].getNom());
     }
 
     /**
@@ -177,13 +119,7 @@ public class AvioTest {
      */
     @Test
     public void testGetPosicioClasses() {
-        System.out.println("getPosicioClasses");
-        Avio instance = null;
-        int expResult = 0;
-        int result = instance.getPosicioClasses();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(0, avio.getPosicioClasses());
     }
 
     /**
@@ -191,76 +127,7 @@ public class AvioTest {
      */
     @Test
     public void testSetPosicioClasses() {
-        System.out.println("setPosicioClasses");
-        int posicioClasses = 0;
-        Avio instance = null;
-        instance.setPosicioClasses(posicioClasses);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        avio.setPosicioClasses(1);
+        assertEquals(1, avio.getPosicioClasses());
     }
-
-    /**
-     * Test of nouAvio method, of class Avio.
-     */
-    @Test
-    public void testNouAvio() {
-        System.out.println("nouAvio");
-        Avio expResult = null;
-        Avio result = Avio.nouAvio();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of modificarComponent method, of class Avio.
-     */
-    @Test
-    public void testModificarComponent() {
-        System.out.println("modificarComponent");
-        Avio instance = null;
-        instance.modificarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of mostrarComponent method, of class Avio.
-     */
-    @Test
-    public void testMostrarComponent() {
-        System.out.println("mostrarComponent");
-        Avio instance = null;
-        instance.mostrarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of afegirClasse method, of class Avio.
-     */
-    @Test
-    public void testAfegirClasse() {
-        System.out.println("afegirClasse");
-        Avio instance = null;
-        instance.afegirClasse();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of seleccionarClasse method, of class Avio.
-     */
-    @Test
-    public void testSeleccionarClasse() {
-        System.out.println("seleccionarClasse");
-        String nom = "";
-        Avio instance = null;
-        int expResult = 0;
-        int result = instance.seleccionarClasse(nom);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }
