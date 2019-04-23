@@ -9,7 +9,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import principal.Companyia;
-import testEntity.TestEntity;
 
 /**
  *
@@ -18,12 +17,6 @@ import testEntity.TestEntity;
 public class CompanyiaTest {
     
     private Companyia companyia;
-
-	@Before
-	public void setUp() {
-            TestEntity nTest = new TestEntity();
-            companyia = nTest.getCompanyia();
-	}
 
 	@Test
 	public void testGetCodi() {

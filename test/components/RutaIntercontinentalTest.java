@@ -9,7 +9,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import components.RutaIntercontinental;
-import testEntity.TestEntity;
 
 /**
  *
@@ -18,12 +17,6 @@ import testEntity.TestEntity;
 public class RutaIntercontinentalTest {
     
     private RutaIntercontinental ruta;
-
-    @Before
-    public void setUp() {
-        TestEntity nTest = new TestEntity();
-        ruta = nTest.getRutaNacional();
-    }
 
     @Test
     public void testGetCodi() {
