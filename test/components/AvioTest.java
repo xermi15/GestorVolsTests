@@ -18,14 +18,15 @@ import static org.junit.Assert.*;
  */
 public class AvioTest {
 
-    public AvioTest() {
-    }
+    private Avio avio;
 
     @Before
     public static void setUpClass() {
-      TestEntity nTest = new TestEntity();
-      avio = nTest.getAvio();
-      classe = nTest.getClasses();
+    }
+
+    @Before
+    public void setUp() {
+      avio = new Avio();
     }
 
     /**

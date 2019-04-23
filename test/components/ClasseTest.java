@@ -19,12 +19,15 @@ import components.Classe;
  */
 public class ClasseTest {
 
-    private Classe cla;
+    private Classe claseTest;
 
     @BeforeClass
     public static void setUpClass() {
-      TestEntity nTest = new TestEntity();
-      cla = nTest.getClasses();
+    }
+
+    @Before
+    public void setUp() {
+      claseTest = new Classe();
     }
 
     /**
@@ -32,7 +35,7 @@ public class ClasseTest {
      */
     @Test
     public void testGetNom() {
-        assertEquals("nomTest", classe.getNom());
+        assertEquals("nomTest", claseTest.getNom());
     }
 
     /**
@@ -40,8 +43,8 @@ public class ClasseTest {
      */
     @Test
     public void testSetNom() {
-        classe.setNom("nTest");
-        assertEquals("nTest", classe.getNom());
+        claseTest.setNom("nTest");
+        assertEquals("nTest", claseTest.getNom());
     }
 
     /**
@@ -49,7 +52,7 @@ public class ClasseTest {
      */
     @Test
     public void testGetCapacitat() {
-        assertEquals(100, classe.getCapacitat());
+        assertEquals(100, claseTest.getCapacitat());
     }
 
 }
