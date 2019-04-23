@@ -5,100 +5,77 @@
  */
 package components;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import components.RutaNacional;
+import testEntity.TestEntity;
 
 /**
  *
  * @author Xavi
  */
 public class RutaNacionalTest {
-    
-    public RutaNacionalTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    private RutaNacional ruta;
+
     @Before
     public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+        TestEntity nTest = new TestEntity();
+        ruta = nTest.getRutaNacional();
     }
 
-    /**
-     * Test of getPais method, of class RutaNacional.
-     */
+    @Test
+    public void testGetCodi() {
+        assertEquals("cTest", ruta.getCodi());
+    }
+
+    @Test
+    public void testSetCodi() {
+        ruta.setCodi("cTest2");
+        assertEquals("cTest2", ruta.getCodi());
+    }
+
+    @Test
+    public void testGetAeroportOri() {
+        assertEquals("aerOriTest", ruta.getAeroportOri());
+    }
+
+    @Test
+    public void testSetAeroportOri() {
+        ruta.setAeroportOri("aerOriTest2");
+        assertEquals("aerOriTest2", ruta.getAeroportOri());
+    }
+
+    @Test
+    public void testGetAeroportDes() {
+        assertEquals("aerDesTest", ruta.getAeroportDes());
+    }
+
+    @Test
+    public void testSetAeroportDes() {
+        ruta.setAeroportDes("aerDesTest2");
+        assertEquals("aerDesTest2", ruta.getAeroportDes());
+    }
+
+    @Test
+    public void testGetDistancia() {
+        assertEquals(String.valueOf(1000.0), String.valueOf(ruta.getDistancia()));
+    }
+
+    @Test
+    public void testSetDistancia() {
+        ruta.setDistancia(2000.0);
+        assertEquals(String.valueOf(2000.0), String.valueOf(ruta.getDistancia()));
+    }
+
     @Test
     public void testGetPais() {
-        System.out.println("getPais");
-        RutaNacional instance = null;
-        String expResult = "";
-        String result = instance.getPais();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("pais", ruta.getPais());
     }
 
-    /**
-     * Test of setPais method, of class RutaNacional.
-     */
     @Test
     public void testSetPais() {
-        System.out.println("setPais");
-        String pais = "";
-        RutaNacional instance = null;
-        instance.setPais(pais);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ruta.setPais("paisTest2");
+        assertEquals("paisTest2", ruta.getPais());
     }
-
-    /**
-     * Test of novaRutaNacional method, of class RutaNacional.
-     */
-    @Test
-    public void testNovaRutaNacional() {
-        System.out.println("novaRutaNacional");
-        RutaNacional expResult = null;
-        RutaNacional result = RutaNacional.novaRutaNacional();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of modificarComponent method, of class RutaNacional.
-     */
-    @Test
-    public void testModificarComponent() {
-        System.out.println("modificarComponent");
-        RutaNacional instance = null;
-        instance.modificarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of mostrarComponent method, of class RutaNacional.
-     */
-    @Test
-    public void testMostrarComponent() {
-        System.out.println("mostrarComponent");
-        RutaNacional instance = null;
-        instance.mostrarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }

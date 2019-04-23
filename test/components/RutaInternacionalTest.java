@@ -5,12 +5,11 @@
  */
 package components;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import components.RutaInternacional;
+import testEntity.TestEntity;
 
 /**
  *
@@ -18,114 +17,73 @@ import static org.junit.Assert.*;
  */
 public class RutaInternacionalTest {
     
-    public RutaInternacionalTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    RutaInternacional ruta;
+
     @Before
     public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+        TestEntity nTest = new TestEntity();
+        ruta = nTest.getRutaNacional();
     }
 
-    /**
-     * Test of getPaisOri method, of class RutaInternacional.
-     */
     @Test
+    public void testGetCodi() {
+        assertEquals("cTest", ruta.getCodi());
+    }
+
+    @Test
+    public void testSetCodi() {
+        ruta.setCodi("cTest2");
+        assertEquals("cTest2", ruta.getCodi());
+    }
+
+    @Test
+    public void testGetAeroportOri() {
+        assertEquals("aerOriTest", ruta.getAeroportOri());
+    }
+
+    @Test
+    public void testSetAeroportOri() {
+        ruta.setAeroportOri("aerOriTest2");
+        assertEquals("aerOriTest2", ruta.getAeroportOri());
+    }
+
+    @Test
+    public void testGetAeroportDes() {
+        assertEquals("aerDesTest", ruta.getAeroportDes());
+    }
+
+    @Test
+    public void testSetAeroportDes() {
+        ruta.setAeroportDes("aerDesTest2");
+        assertEquals("aerDesTest2", ruta.getAeroportDes());
+    }
+
+    @Test
+    public void testGetDistancia() {
+        assertEquals(String.valueOf(1000.0), String.valueOf(ruta.getDistancia()));
+    }
+
+    @Test
+    public void testSetDistancia() {
+        ruta.setDistancia(2000.0);
+        assertEquals(String.valueOf(2000.0), String.valueOf(ruta.getDistancia()));
+    }
+
     public void testGetPaisOri() {
-        System.out.println("getPaisOri");
-        RutaInternacional instance = null;
-        String expResult = "";
-        String result = instance.getPaisOri();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("paisOri", ruta.getPaisOri());
     }
 
-    /**
-     * Test of setPaisOri method, of class RutaInternacional.
-     */
-    @Test
-    public void testSetPaisOri() {
-        System.out.println("setPaisOri");
-        String paisOri = "";
-        RutaInternacional instance = null;
-        instance.setPaisOri(paisOri);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetPaisOri(String paisOri) {
+        ruta.setPaisOri("paisOri2");
+        assertEquals("paisOri2", ruta.getPaisOri());
     }
 
-    /**
-     * Test of getPaisDes method, of class RutaInternacional.
-     */
-    @Test
     public void testGetPaisDes() {
-        System.out.println("getPaisDes");
-        RutaInternacional instance = null;
-        String expResult = "";
-        String result = instance.getPaisDes();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("paisDes", ruta.getPaisDes());
     }
 
-    /**
-     * Test of setPaisDes method, of class RutaInternacional.
-     */
-    @Test
-    public void testSetPaisDes() {
-        System.out.println("setPaisDes");
-        String paisDes = "";
-        RutaInternacional instance = null;
-        instance.setPaisDes(paisDes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetPaisDes(String paisDes) {
+        ruta.setPaisDes("paisDes2");
+        assertEquals("paisDes2", ruta.getPaisDes());
     }
-
-    /**
-     * Test of novaRutaInternacional method, of class RutaInternacional.
-     */
-    @Test
-    public void testNovaRutaInternacional() {
-        System.out.println("novaRutaInternacional");
-        RutaInternacional expResult = null;
-        RutaInternacional result = RutaInternacional.novaRutaInternacional();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of modificarComponent method, of class RutaInternacional.
-     */
-    @Test
-    public void testModificarComponent() {
-        System.out.println("modificarComponent");
-        RutaInternacional instance = null;
-        instance.modificarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of mostrarComponent method, of class RutaInternacional.
-     */
-    @Test
-    public void testMostrarComponent() {
-        System.out.println("mostrarComponent");
-        RutaInternacional instance = null;
-        instance.mostrarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }

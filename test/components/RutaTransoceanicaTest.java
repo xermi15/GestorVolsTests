@@ -5,12 +5,11 @@
  */
 package components;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import components.RutaTransoceanica;
+import testEntity.TestEntity;
 
 /**
  *
@@ -18,87 +17,82 @@ import static org.junit.Assert.*;
  */
 public class RutaTransoceanicaTest {
     
-    public RutaTransoceanicaTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    RutaTransoceanica ruta;
+
     @Before
     public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+        TestEntity nTest = new TestEntity();
+        ruta = nTest.getRutaTransoceanica();
     }
 
-    /**
-     * Test of getOcea method, of class RutaTransoceanica.
-     */
     @Test
+    public void testGetCodi() {
+        assertEquals("cTest", ruta.getCodi());
+    }
+
+    @Test
+    public void testSetCodi() {
+        ruta.setCodi("cTest2");
+        assertEquals("cTest2", ruta.getCodi());
+    }
+
+    @Test
+    public void testGetAeroportOri() {
+        assertEquals("aerOriTest", ruta.getAeroportOri());
+    }
+
+    @Test
+    public void testSetAeroportOri() {
+        ruta.setAeroportOri("aerOriTest2");
+        assertEquals("aerOriTest2", ruta.getAeroportOri());
+    }
+
+    @Test
+    public void testGetAeroportDes() {
+        assertEquals("aerDesTest", ruta.getAeroportDes());
+    }
+
+    @Test
+    public void testSetAeroportDes() {
+        ruta.setAeroportDes("aerDesTest2");
+        assertEquals("aerDesTest2", ruta.getAeroportDes());
+    }
+
+    @Test
+    public void testGetDistancia() {
+        assertEquals(String.valueOf(1000.0), String.valueOf(ruta.getDistancia()));
+    }
+
+    @Test
+    public void testSetDistancia() {
+        ruta.setDistancia(2000.0);
+        assertEquals(String.valueOf(2000.0), String.valueOf(ruta.getDistancia()));
+    }
+
+    public void testGetPaisOri() {
+        assertEquals("paisOri", ruta.getPaisOri());
+    }
+
+    public void testSetPaisOri(String paisOri) {
+        ruta.setPaisOri("paisOri2");
+        assertEquals("paisOri2", ruta.getPaisOri());
+    }
+
+    public void testGetPaisDes() {
+        assertEquals("paisDes", ruta.getPaisDes());
+    }
+
+    public void testSetPaisDes(String paisDes) {
+        ruta.setPaisDes("paisDes2");
+        assertEquals("paisDes2", ruta.getPaisDes());
+    }
+    
     public void testGetOcea() {
-        System.out.println("getOcea");
-        RutaTransoceanica instance = null;
-        String expResult = "";
-        String result = instance.getOcea();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        assertEquals("oceaTest", ruta.getOcea());
+}
 
-    /**
-     * Test of setOcea method, of class RutaTransoceanica.
-     */
-    @Test
-    public void testSetOcea() {
-        System.out.println("setOcea");
-        String ocea = "";
-        RutaTransoceanica instance = null;
-        instance.setOcea(ocea);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetOcea(String ocea) {
+        ruta.setOcea("oceaTest2");
+        assertEquals("oceaTest2", ruta.getOcea());
     }
-
-    /**
-     * Test of novaRutaTransoceanica method, of class RutaTransoceanica.
-     */
-    @Test
-    public void testNovaRutaTransoceanica() {
-        System.out.println("novaRutaTransoceanica");
-        RutaTransoceanica expResult = null;
-        RutaTransoceanica result = RutaTransoceanica.novaRutaTransoceanica();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of modificarComponent method, of class RutaTransoceanica.
-     */
-    @Test
-    public void testModificarComponent() {
-        System.out.println("modificarComponent");
-        RutaTransoceanica instance = null;
-        instance.modificarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of mostrarComponent method, of class RutaTransoceanica.
-     */
-    @Test
-    public void testMostrarComponent() {
-        System.out.println("mostrarComponent");
-        RutaTransoceanica instance = null;
-        instance.mostrarComponent();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }
