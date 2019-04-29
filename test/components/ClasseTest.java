@@ -39,15 +39,6 @@ public class ClasseTest {
     }
 
     /**
-     * Test of setNom method, of class Classe.
-     */
-    @Test
-    public void testSetNom() {
-        claseTest.setNom("nTest");
-        assertEquals("nTest", claseTest.getNom());
-    }
-
-    /**
      * Test of getCapacitat method, of class Classe.
      */
     @Test

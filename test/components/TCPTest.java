@@ -33,7 +33,6 @@ public class TCPTest {
 
     @Before
     public void setUp() {
-      tripulant = new TripulantCabina('pass', 'nom', 40, 900);
     }
 
     @After

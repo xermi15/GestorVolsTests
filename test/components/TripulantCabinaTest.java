@@ -31,7 +31,7 @@ public class TripulantCabinaTest {
 
     @Before
     public void setUp() {
-      tripulant = Tripulant('pass', 'nom', 40, 800);
+      tripulant = Tripulant('pass', 'nom', 40, 800, 'CP');
     }
 
     @After
@@ -39,70 +39,8 @@ public class TripulantCabinaTest {
     }
 
     @Test
-  	public void testGetPassaport() {
-  		assertEquals("PassaportTest", tripulant.getPassaport());
-  	}
-
-  	@Test
-  	public void testSetPassaport() {
-  		tripulant.setPassaport("PassaportTest2");
-  		assertEquals("PassaportTest2", tripulant.getPassaport());
-  	}
-
-  	@Test
-  	public void testGetNom() {
-  		assertEquals("NomTest", tripulant.getNom());
-  	}
-
-  	@Test
-  	public void testSetNom() {
-  		tripulant.setNom("NomTest2");
-  		assertEquals("NomTest2", tripulant.getNom());
-  	}
-
-  	@Test
-  	public void testGetEdat() {
-  		assertEquals(40, tripulant.getEdat());
-  	}
-
-  	@Test
-  	public void testSetEdat() {
-  		tripulant.setEdat(15);
-  		assertEquals(15, tripulant.getEdat());
-  	}
-
-  	@Test
-  	public void testGetDataAlta() {
-  		assertEquals(data, tripulant.getDataAlta());
-  	}
-
-    @Test
-    public void testSetDataAlta() {
-    	dTripulant = new Date();
-    	tripulant.setDataAlta(dataAlta);
-    	assertEquals(dTripulant, tripulant.getDataAlta());
-    }
-
-    @Test
-    public void testGetHoresVol() {
-    	assertEquals(100, tripulant.getHoresVol());
-    }
-
-    @Test
-    public void testSetHoresVol() {
-    	tripulant.setHoresVol(200);
-    	assertEquals(200, tripulant.getHoresVol());
-    }
-
-    @Test
       public void testGetRang() {
         assertEquals("Comandant", tripulant.getRang());
-      }
-
-    @Test
-      public void testSetRang() {
-        tripulant.setRang("C");
-        assertEquals("C", tripulant.getRang());
       }
 
 }

@@ -49,28 +49,10 @@ public class TripulantTest {
     }
 
     /**
-     * Test of setPassaport method, of class Tripulant.
-     */
-    @Test
-    public void testSetPassaport() {
-        tripulantTest.setPassaport("passTest");
-        assertEquals("passTest", tripulantTest.getPassaport());
-    }
-
-    /**
      * Test of getNom method, of class Tripulant.
      */
     @Test
     public void testGetNom() {
-        assertEquals("nomTest", tripulantTest.getNom());
-    }
-
-    /**
-     * Test of setNom method, of class Tripulant.
-     */
-    @Test
-    public void testSetNom() {
-        tripulantTest.setNom("nomTest");
         assertEquals("nomTest", tripulantTest.getNom());
     }
 
@@ -83,30 +65,11 @@ public class TripulantTest {
     }
 
     /**
-     * Test of setEdat method, of class Tripulant.
-     */
-    @Test
-    public void testSetEdat() {
-        tripulantTest.setEdat(51);
-        assertEquals(51, tripulantTest.getEdat());
-    }
-
-    /**
      * Test of getDataAlta method, of class Tripulant.
      */
     @Test
     public void testGetDataAlta() {
         assetEquals(dateTripulant, tripulantTest.getDataAlta());
-    }
-
-    /**
-     * Test of setDataAlta method, of class Tripulant.
-     */
-    @Test
-    public void testSetDataAlta() {
-        dateTripulant = new date();
-        tripulantTest.setDataAlta(dateTripulant);
-        assertEquals(dateTripulant, tripulantTest.getDataAlta());
     }
 
     /**
@@ -118,29 +81,11 @@ public class TripulantTest {
     }
 
     /**
-     * Test of setHoresVol method, of class Tripulant.
-     */
-    @Test
-    public void testSetHoresVol() {
-        tripulantTest.setHoresVol(55);
-        assertEquals(55, tripulantTest.getHoresVol());
-    }
-
-    /**
      * Test of getRang method, of class Tripulant.
      */
     @Test
     public void testGetRang() {
         assertEquals("Copilot", tripulantTest.getRang());
-    }
-
-    /**
-     * Test of setRang method, of class Tripulant.
-     */
-    @Test
-    public void testSetRang() {
-        tripulantTest.setRang("C");
-        assertEquals("C", tripulantTest.getRang());
     }
 
 }

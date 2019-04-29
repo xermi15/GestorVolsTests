@@ -38,15 +38,6 @@ public class AvioTest {
     }
 
     /**
-     * Test of setCodi method, of class Avio.
-     */
-    @Test
-    public void testSetCodi() {
-        avio.setCodi("CodiA");
-        assertEquals("CodiA", avio.getCodi());
-    }
-
-    /**
      * Test of getFabricant method, of class Avio.
      */
     @Test
@@ -54,29 +45,12 @@ public class AvioTest {
         assertEquals("CodiF", avio.getFabricant());
     }
 
-    /**
-     * Test of setFabricant method, of class Avio.
-     */
-    @Test
-    public void testSetFabricant() {
-        avio.setFabricant('CodiF');
-        assertEquals("CodiF", avio.getFabricant());
-    }
 
     /**
      * Test of getModel method, of class Avio.
      */
     @Test
     public void testGetModel() {
-        assertEquals("mTest", avio.getModel());
-    }
-
-    /**
-     * Test of setModel method, of class Avio.
-     */
-    @Test
-    public void testSetModel() {
-        avio.setModel("mTest");
         assertEquals("mTest", avio.getModel());
     }
 
@@ -89,15 +63,6 @@ public class AvioTest {
     }
 
     /**
-     * Test of setCapacitat method, of class Avio.
-     */
-    @Test
-    public void testSetCapacitat() {
-        avio.setCapacitat(150);
-        assertEquals(150, avio.getCapacitat());
-    }
-
-    /**
      * Test of getClasses method, of class Avio.
      */
     @Test
@@ -105,15 +70,6 @@ public class AvioTest {
         assertEquals(classe, avio.getClasses());
     }
 
-    /**
-     * Test of setClasses method, of class Avio.
-     */
-    @Test
-    public void testSetClasses() {
-      Classe[] classTest = new Classe("testClass", 100);
-      avio.setClasses(classTest);
-      assertEquals(classTest[0].getNom(), avio.getClasses()[0].getNom());
-    }
 
     /**
      * Test of getPosicioClasses method, of class Avio.
@@ -123,12 +79,4 @@ public class AvioTest {
         assertEquals(0, avio.getPosicioClasses());
     }
 
-    /**
-     * Test of setPosicioClasses method, of class Avio.
-     */
-    @Test
-    public void testSetPosicioClasses() {
-        avio.setPosicioClasses(1);
-        assertEquals(1, avio.getPosicioClasses());
-    }
 }
