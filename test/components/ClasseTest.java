@@ -27,7 +27,7 @@ public class ClasseTest {
 
     @Before
     public void setUp() {
-      claseTest = new Classe();
+      claseTest = new Classe('Nom', 10);
     }
 
     /**

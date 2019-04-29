@@ -24,8 +24,6 @@ public class TCPTest {
 
     @BeforeClass
     public static void setUpClass() {
-      TestEntity nTest = new TestEntity();
-      tripulant = nTest.getTripulant();
 
     }
 
@@ -35,6 +33,7 @@ public class TCPTest {
 
     @Before
     public void setUp() {
+      tripulant = new TripulantCabina('pass', 'nom', 40, 900);
     }
 
     @After

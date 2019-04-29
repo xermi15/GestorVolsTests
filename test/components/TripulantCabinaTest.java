@@ -31,7 +31,7 @@ public class TripulantCabinaTest {
 
     @Before
     public void setUp() {
-      tripulant = Tripulant();
+      tripulant = Tripulant('pass', 'nom', 40, 800);
     }
 
     @After

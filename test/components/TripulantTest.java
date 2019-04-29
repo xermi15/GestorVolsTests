@@ -33,7 +33,7 @@ public class TripulantTest {
 
     @Before
     public void setUp() {
-      tripulantTest = new Tripulant();
+      tripulantTest = new Tripulant('pass', 'nom', 40, 900);
     }
 
     @After

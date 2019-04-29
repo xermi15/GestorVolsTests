@@ -26,7 +26,7 @@ public class AvioTest {
 
     @Before
     public void setUp() {
-      avio = new Avio();
+      avio = new Avio('codi', 'fabricant', 'model', 10);
     }
 
     /**
