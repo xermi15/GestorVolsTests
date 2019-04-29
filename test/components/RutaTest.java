@@ -28,21 +28,9 @@ public class RutaTest {
     }
 
     @Test
-    public void testSetCodi() {
-        ruta.setCodi("cTest2");
-        assertEquals("cTest2", ruta.getCodi());
-    }
-
-    @Test
     public void testGetAeroportOri() {
         assertEquals("aerOriTest", ruta.getAeroportOri());
     }
-
-    @Test
-    public void testSetAeroportOri() {
-        ruta.setAeroportOri("aerOriTest2");
-        assertEquals("aerOriTest2", ruta.getAeroportOri());
-}
 
     @Test
     public void testGetAeroportDes() {
@@ -50,19 +38,8 @@ public class RutaTest {
     }
 
     @Test
-    public void testSetAeroportDes() {
-        ruta.setAeroportDes("aerDesTest2");
-        assertEquals("aerDesTest2", ruta.getAeroportDes());
-    }
-
-    @Test
     public void testGetDistancia() {
         assertEquals(String.valueOf(1000.0), String.valueOf(ruta.getDistancia()));
     }
-
-    @Test
-    public void testSetDistancia() {
-        ruta.setDistancia(2000.0);
-        assertEquals(String.valueOf(2000.0), String.valueOf(ruta.getDistancia()));
-    }
 }
+

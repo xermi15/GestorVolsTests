@@ -64,7 +64,6 @@ public class VolTest {
     public void testGetHoraSortida() {
         LocalTime result = LocalTime.parse("12:12");
         assertEquals(result, vol.getHoraSortida());
-
     }
 
     @Test

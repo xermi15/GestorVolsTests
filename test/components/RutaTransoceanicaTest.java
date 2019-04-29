@@ -23,73 +23,17 @@ public class RutaTransoceanicaTest {
     }
     
     @Test
-    public void testGetCodi() {
-        assertEquals("cTest", ruta.getCodi());
-    }
-
-    @Test
-    public void testSetCodi() {
-        ruta.setCodi("cTest2");
-        assertEquals("cTest2", ruta.getCodi());
-    }
-
-    @Test
-    public void testGetAeroportOri() {
-        assertEquals("aerOriTest", ruta.getAeroportOri());
-    }
-
-    @Test
-    public void testSetAeroportOri() {
-        ruta.setAeroportOri("aerOriTest2");
-        assertEquals("aerOriTest2", ruta.getAeroportOri());
-    }
-
-    @Test
-    public void testGetAeroportDes() {
-        assertEquals("aerDesTest", ruta.getAeroportDes());
-    }
-
-    @Test
-    public void testSetAeroportDes() {
-        ruta.setAeroportDes("aerDesTest2");
-        assertEquals("aerDesTest2", ruta.getAeroportDes());
-    }
-
-    @Test
-    public void testGetDistancia() {
-        assertEquals(String.valueOf(1000.0), String.valueOf(ruta.getDistancia()));
-    }
-
-    @Test
-    public void testSetDistancia() {
-        ruta.setDistancia(2000.0);
-        assertEquals(String.valueOf(2000.0), String.valueOf(ruta.getDistancia()));
-    }
-
     public void testGetPaisOri() {
         assertEquals("paisOri", ruta.getPaisOri());
     }
-
-    public void testSetPaisOri(String paisOri) {
-        ruta.setPaisOri("paisOri2");
-        assertEquals("paisOri2", ruta.getPaisOri());
-    }
-
+    
+    @Test
     public void testGetPaisDes() {
         assertEquals("paisDes", ruta.getPaisDes());
     }
-
-    public void testSetPaisDes(String paisDes) {
-        ruta.setPaisDes("paisDes2");
-        assertEquals("paisDes2", ruta.getPaisDes());
-    }
     
+    @Test
     public void testGetOcea() {
         assertEquals("oceaTest", ruta.getOcea());
-}
-
-    public void testSetOcea(String ocea) {
-        ruta.setOcea("oceaTest2");
-        assertEquals("oceaTest2", ruta.getOcea());
     }
 }

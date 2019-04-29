@@ -18,19 +18,18 @@ public class CompanyiaTest {
     
     private Companyia companyia;
 
-	@Test
-	public void testGetCodi() {
-            assertEquals(1, companyia.getCodi());
-	}
+    @Test
+    public void testGetCodi() {
+        assertEquals(1, companyia.getCodi());
+    }
 
-	@Test
-	public void testGetProperCodi() {
-            assertEquals(2, companyia.getCodi() + 1);
-	}
+    @Test
+    public void testGetProperCodi() {
+        assertEquals(2, companyia.getCodi() + 1);
+    }
 
-	@Test
-	public void testGetNom() {
-            assertEquals("CompanyiaTest", companyia.getNom());
-	}
-    
+    @Test
+    public void testGetNom() {
+        assertEquals("CompanyiaTest", companyia.getNom());
+    }
 }
